@@ -24,6 +24,7 @@ for partition in psutil.disk_partitions():
             'icon_emoji': ':minidisc:',
             'channel': '#tech',
             'text': (
+                '<!channel> ' +
                 socket.gethostname() + ': disk at ' + partition.mountpoint +
                 ' is ' + str(psutil.disk_usage(partition.mountpoint).percent) +
                 '% full'
