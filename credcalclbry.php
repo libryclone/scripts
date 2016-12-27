@@ -39,7 +39,7 @@ function getTotalReward($fromBlock, $toBlock) {
 
 
 
-$blockTime = 150;
+$blockTime = 160.9;
 $start = 1466646588;
 $now = gmdate('U');
 
@@ -62,8 +62,8 @@ echo "Target: $target (" . date('Y-m-d H:i:s', $target) . ")\n";
 
 echo "\n";
 
-echo "Blocks now (assuming exactly 2.5m per block): " . number_format($blocksNow) . "\n";
-echo "Credits now (assuming exactly 2.5m per block): " . number_format(getTotalReward(1,$blocksNow)) . "\n";
+echo "Blocks now (assuming {$blockTime} seconds per block): " . number_format($blocksNow) . "\n";
+echo "Credits now (assuming {$blockTime} seconds per block): " . number_format(getTotalReward(1,$blocksNow)) . "\n";
 
 echo "\n";
 
